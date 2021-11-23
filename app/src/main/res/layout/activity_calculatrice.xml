@@ -12,8 +12,9 @@
         android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="1pt"
         android:layout_weight="1"
-        android:background="@color/cardview_light_background"
+        android:background="#E9E4E4"
         android:ems="10"
         android:gravity="right|center"
         android:inputType="textPersonName"
@@ -33,7 +34,7 @@
             android:layout_height="130dp">
 
             <Button
-                android:id="@+id/button1"
+                android:id="@+id/buttonAC"
                 android:layout_marginRight="1pt"
                 android:layout_marginLeft="1pt"
                 android:layout_marginTop="1pt"
@@ -45,11 +46,12 @@
                 android:backgroundTint="#867D7D"
                 android:orientation="vertical"
                 android:text="AC"
+                android:onClick="acEvent"
                 android:textSize="36sp"
                 android:textColor="#FFF"/>
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/buttonmod"
                 android:layout_marginRight="1pt"
                 android:layout_marginLeft="1pt"
                 android:layout_marginTop="1pt"
@@ -61,12 +63,13 @@
                 android:backgroundTint="#877E7E"
                 android:orientation="vertical"
                 android:text="%"
+                android:onClick="percentEvent"
                 android:textSize="36sp"
                 android:textColor="#FFF"
 
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/buttonplusoumoin"
                 android:layout_marginRight="1pt"
                 android:layout_marginLeft="1pt"
                 android:layout_marginTop="1pt"
@@ -78,11 +81,12 @@
                 android:backgroundTint="#887F7F"
                 android:orientation="vertical"
                 android:text="+/-"
+                android:onClick="numberEvent"
                 android:textSize="36sp"
                 android:textColor="#FFF"/>
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/buttondiv"
                 android:layout_marginRight="1pt"
                 android:layout_marginLeft="1pt"
                 android:layout_marginTop="1pt"
@@ -93,6 +97,7 @@
                 android:background="#FF9902"
                 android:orientation="vertical"
                 android:text="/"
+                android:onClick="operatorEvent"
                 android:textSize="36sp"
                 android:textColor="#FFF"/>
         </TableRow>
@@ -100,6 +105,91 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="130dp">
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_marginRight="1pt"
+                android:layout_marginLeft="1pt"
+                android:layout_marginTop="1pt"
+                android:layout_marginBottom="1pt"
+                android:layout_width="148dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@color/cardview_dark_background"
+                android:orientation="vertical"
+                android:text="7"
+                android:onClick="numberEvent"
+                android:textSize="36sp"
+                android:textColor="#FFF"/>
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_marginRight="1pt"
+                android:layout_marginLeft="1pt"
+                android:layout_marginTop="1pt"
+                android:layout_marginBottom="1pt"
+                android:layout_width="148dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@color/cardview_dark_background"
+                android:orientation="vertical"
+                android:text="8"
+                android:onClick="numberEvent"
+                android:textSize="36sp"
+                android:textColor="#FFF"/>
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_marginRight="1pt"
+                android:layout_marginLeft="1pt"
+                android:layout_marginTop="1pt"
+                android:layout_marginBottom="1pt"
+                android:layout_width="148dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@color/cardview_dark_background"
+                android:orientation="vertical"
+                android:text="9"
+                android:onClick="numberEvent"
+                android:textSize="36sp"
+                android:textColor="#FFF"/>
+
+            <Button
+                android:id="@+id/buttonmtp"
+                android:layout_marginRight="1pt"
+                android:layout_marginLeft="1pt"
+                android:layout_marginTop="1pt"
+                android:layout_marginBottom="1pt"
+                android:layout_width="148dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="#FF9800"
+                android:orientation="vertical"
+                android:text="*"
+                android:onClick="operatorEvent"
+                android:textSize="36sp"
+                android:textColor="#FFF"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="130dp">
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_marginRight="1pt"
+                android:layout_marginLeft="1pt"
+                android:layout_marginTop="1pt"
+                android:layout_marginBottom="1pt"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@color/cardview_dark_background"
+                android:orientation="vertical"
+                android:text="4"
+                android:onClick="numberEvent"
+                android:textSize="36sp"
+                android:textColor="#FFF"/>
 
             <Button
                 android:id="@+id/button5"
@@ -112,7 +202,8 @@
                 android:layout_weight="1"
                 android:background="@color/cardview_dark_background"
                 android:orientation="vertical"
-                android:text="7"
+                android:text="5"
+                android:onClick="numberEvent"
                 android:textSize="36sp"
                 android:textColor="#FFF"/>
 
@@ -127,92 +218,13 @@
                 android:layout_weight="1"
                 android:background="@color/cardview_dark_background"
                 android:orientation="vertical"
-                android:text="8"
-                android:textSize="36sp"
-                android:textColor="#FFF"/>
-
-            <Button
-                android:id="@+id/button7"
-                android:layout_marginRight="1pt"
-                android:layout_marginLeft="1pt"
-                android:layout_marginTop="1pt"
-                android:layout_marginBottom="1pt"
-                android:layout_width="148dp"
-                android:layout_height="100dp"
-                android:layout_weight="1"
-                android:background="@color/cardview_dark_background"
-                android:orientation="vertical"
-                android:text="9"
-                android:textSize="36sp"
-                android:textColor="#FFF"/>
-
-            <Button
-                android:id="@+id/button8"
-                android:layout_marginRight="1pt"
-                android:layout_marginLeft="1pt"
-                android:layout_marginTop="1pt"
-                android:layout_marginBottom="1pt"
-                android:layout_width="148dp"
-                android:layout_height="100dp"
-                android:layout_weight="1"
-                android:background="#FF9800"
-                android:orientation="vertical"
-                android:text="*"
-                android:textSize="36sp"
-                android:textColor="#FFF"/>
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="130dp">
-
-            <Button
-                android:id="@+id/button9"
-                android:layout_marginRight="1pt"
-                android:layout_marginLeft="1pt"
-                android:layout_marginTop="1pt"
-                android:layout_marginBottom="1pt"
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_weight="1"
-                android:background="@color/cardview_dark_background"
-                android:orientation="vertical"
-                android:text="4"
-                android:textSize="36sp"
-                android:textColor="#FFF"/>
-
-            <Button
-                android:id="@+id/button10"
-                android:layout_marginRight="1pt"
-                android:layout_marginLeft="1pt"
-                android:layout_marginTop="1pt"
-                android:layout_marginBottom="1pt"
-                android:layout_width="148dp"
-                android:layout_height="100dp"
-                android:layout_weight="1"
-                android:background="@color/cardview_dark_background"
-                android:orientation="vertical"
-                android:text="5"
-                android:textSize="36sp"
-                android:textColor="#FFF"/>
-
-            <Button
-                android:id="@+id/button11"
-                android:layout_marginRight="1pt"
-                android:layout_marginLeft="1pt"
-                android:layout_marginTop="1pt"
-                android:layout_marginBottom="1pt"
-                android:layout_width="148dp"
-                android:layout_height="100dp"
-                android:layout_weight="1"
-                android:background="@color/cardview_dark_background"
-                android:orientation="vertical"
                 android:text="6"
+                android:onClick="numberEvent"
                 android:textSize="36sp"
                 android:textColor="#FFF"/>
 
             <Button
-                android:id="@+id/button12"
+                android:id="@+id/buttonsous"
                 android:layout_marginRight="1pt"
                 android:layout_marginLeft="1pt"
                 android:layout_marginTop="1pt"
@@ -223,6 +235,7 @@
                 android:background="#FF9800"
                 android:orientation="vertical"
                 android:text="-"
+                android:onClick="operatorEvent"
                 android:textSize="36sp"
                 android:textColor="#FFF"
                 />
@@ -233,7 +246,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/button13"
+                android:id="@+id/button1"
                 android:layout_marginRight="1pt"
                 android:layout_marginLeft="1pt"
                 android:layout_marginTop="1pt"
@@ -244,11 +257,12 @@
                 android:background="@color/cardview_dark_background"
                 android:orientation="vertical"
                 android:text="1"
+                android:onClick="numberEvent"
                 android:textSize="36sp"
                 android:textColor="#FFF"/>
 
             <Button
-                android:id="@+id/button14"
+                android:id="@+id/button2"
                 android:layout_marginRight="1pt"
                 android:layout_marginLeft="1pt"
                 android:layout_marginTop="1pt"
@@ -259,11 +273,12 @@
                 android:background="@color/cardview_dark_background"
                 android:orientation="vertical"
                 android:text="2"
+                android:onClick="numberEvent"
                 android:textSize="36sp"
                 android:textColor="#FFF"/>
 
             <Button
-                android:id="@+id/button15"
+                android:id="@+id/button3"
                 android:layout_marginRight="1pt"
                 android:layout_marginLeft="1pt"
                 android:layout_marginTop="1pt"
@@ -274,11 +289,12 @@
                 android:background="@color/cardview_dark_background"
                 android:orientation="vertical"
                 android:text="3"
+                android:onClick="numberEvent"
                 android:textSize="36sp"
                 android:textColor="#FFF"/>
 
             <Button
-                android:id="@+id/button16"
+                android:id="@+id/buttonadd"
                 android:layout_marginRight="1pt"
                 android:layout_marginLeft="1pt"
                 android:layout_marginTop="1pt"
@@ -289,6 +305,7 @@
                 android:background="#FF9800"
                 android:orientation="vertical"
                 android:text="+"
+                android:onClick="operatorEvent"
                 android:textSize="36sp"
                 android:textColor="#FFF"/>
         </TableRow>
@@ -300,7 +317,7 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/button17"
+                android:id="@+id/button0"
                 android:layout_width="160dp"
                 android:layout_height="60dp"
                 android:layout_marginLeft="1pt"
@@ -309,14 +326,14 @@
                 android:layout_marginBottom="1pt"
                 android:layout_weight="1"
                 android:background="@color/cardview_dark_background"
-                android:baselineAligned="false"
                 android:orientation="vertical"
                 android:text="0"
+                android:onClick="numberEvent"
                 android:textColor="#FFF"
                 android:textSize="36sp" />
 
             <Button
-                android:id="@+id/button18"
+                android:id="@+id/buttonvirg"
                 android:layout_width="70dp"
                 android:layout_height="60dp"
                 android:layout_marginLeft="1pt"
@@ -327,11 +344,12 @@
                 android:background="@color/cardview_dark_background"
                 android:orientation="vertical"
                 android:text=","
+                android:onClick="numberEvent"
                 android:textColor="#FFF"
                 android:textSize="36sp" />
 
             <Button
-                android:id="@+id/button19"
+                android:id="@+id/buttonegal"
                 android:layout_width="70dp"
                 android:layout_height="60dp"
                 android:layout_marginLeft="1pt"
@@ -342,6 +360,7 @@
                 android:background="@color/cardview_dark_background"
                 android:orientation="vertical"
                 android:text="="
+                android:onClick="equalEvent"
                 android:textColor="#FFF"
                 android:textSize="36sp" />
 
